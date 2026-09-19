@@ -1,0 +1,4 @@
+interface:
+  display_name: "ORION Subspace Beacon"
+  short_description: "Operate and troubleshoot the offline Windows Beacon"
+  default_prompt: "Use $orion-subspace-beacon to activate, discover, connect to, or troubleshoot an authorized ORION Subspace Beacon target."
