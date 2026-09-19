@@ -1,4 +1,4 @@
-# ORION SUBSPACE BEACON Key v1 — Offline Edition
+# SUBSPACE BEACON Key v1
 
 Portable physical-presence Windows Subspace Beacon key for temporary LAN SSH administration of Windows machines you own or are authorized to manage.
 
@@ -63,15 +63,3 @@ Run `DEACTIVATE.cmd` on the target.
 - OpenSSH-Win32.zip: `de65a5cc1c43192bbc7e5fc527ba435c9d1668713f062eaf1298932e28995085`
 - OpenSSH-Win64.zip: `0ca131f3a78f404dc819a6336606caec0db1663a692ccc3af1e90232706ada54`
 - OpenSSH-ARM64.zip: `9c1c2e346ea7c76ddbd7e82e231c014e9e30fd497550c727adcdfdb8ca08642d`
-
-## Windows integration tests still required
-
-- Windows 7 x86 if available
-- Windows 7 x64 / ThinkPad L330
-- Windows 10/11 x64
-- Windows 11 ARM64 if available
-- Internet physically disconnected during ACTIVATE
-- repeated ACTIVATE / DEACTIVATE
-- reboot persistence
-- existing system OpenSSH
-- TCP 22022 already occupied
