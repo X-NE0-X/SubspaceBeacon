@@ -1,0 +1,3 @@
+ORION SUBSPACE BEACON Key: v1 OFFLINE
+Payload architectures: win32 / win64 / arm64
+Target runtime Internet dependency: NONE

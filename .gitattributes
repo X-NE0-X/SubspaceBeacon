@@ -1,0 +1,13 @@
+* text=auto
+
+# Keep Unix controller helpers and Python sources portable.
+*.sh text eol=lf
+*.command text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Keep Windows entry points compatible with the target.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
