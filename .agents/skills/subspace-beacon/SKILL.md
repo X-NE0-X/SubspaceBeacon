@@ -31,7 +31,7 @@ The private key must remain on the controller. Never copy it to the USB drive or
 
 ## Network rules
 
-Same SSID does not prove same LAN. Compare the controller and target IPv4 address, mask, default gateway, and route. A typical working pair is 192.168.31.x/24 with gateway 192.168.31.1. A 169.254.x.x address means DHCP failed.
+Same SSID does not prove same LAN. Compare the controller and target IPv4 address, mask, default gateway, and route. A typical working pair is 192.168.1.x/24 with gateway 192.168.1.1. A 169.254.x.x address means DHCP failed.
 
 5 GHz and 2.4 GHz can work together when the router bridges both bands into the same VLAN. Guest SSIDs, client/AP isolation, mesh VLAN policy, different gateways, old Wi-Fi drivers, and unsupported WPA modes can still prevent connection. Use ipconfig /all, route print -4, netsh wlan show interfaces, and netsh wlan show drivers before changing static IP settings.
 

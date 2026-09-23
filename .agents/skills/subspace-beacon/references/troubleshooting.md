@@ -74,7 +74,7 @@ Normal commands:
 SCAN-LAN.cmd
 py -3 controller\discover.py
 py -3 controller\discover.py --connect
-py -3 controller\discover.py --subnet 192.168.31.0/24 --connect
+py -3 controller\discover.py --subnet 192.168.1.0/24 --connect
 ```
 
 --connect requires exactly one authenticated endpoint. Multiple verified endpoints are an ambiguity and should be resolved by an explicit subnet or known address. A subnet override is appropriate only after the route and gateway have been verified.
@@ -82,13 +82,13 @@ py -3 controller\discover.py --subnet 192.168.31.0/24 --connect
 Known-target verification:
 
 ```powershell
-Test-NetConnection -ComputerName 192.168.31.143 -Port 22022
+Test-NetConnection -ComputerName 192.168.1.143 -Port 22022
 ```
 
 Then use the actual controller key:
 
 ```text
-ssh.exe -o BatchMode=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=NUL -o ConnectTimeout=8 -i "C:\Users\<controller>\.ssh\orion_enrollment_ed25519" -p 22022 ORION-RELAY@192.168.31.143
+ssh.exe -o BatchMode=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=NUL -o ConnectTimeout=8 -i "C:\Users\<controller>\.ssh\orion_enrollment_ed25519" -p 22022 ORION-RELAY@192.168.1.143
 ```
 
 Ping is useful evidence only when it succeeds. A failed ICMP ping does not prove that TCP 22022 is unreachable. A successful TCP test does not prove that SSH authentication is valid. Both network reachability and key authentication matter.
@@ -117,8 +117,8 @@ controller route    target route
 
 Examples:
 
-- 192.168.31.143/24 and 192.168.31.50/24 with gateway 192.168.31.1 are normally the same private LAN.
-- 192.168.31.x and 192.168.50.x may be separate VLANs even when the SSID text is identical.
+- 192.168.1.143/24 and 192.168.1.50/24 with gateway 192.168.1.1 are normally the same private LAN.
+- 192.168.1.x and 192.168.50.x may be separate VLANs even when the SSID text is identical.
 - 169.254.x.x indicates that the old machine did not obtain a DHCP lease.
 - A 5 GHz-capable router does not imply that an old adapter supports the band, its channel width, or its WPA mode.
 

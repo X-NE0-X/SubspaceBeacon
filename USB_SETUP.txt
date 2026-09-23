@@ -1,0 +1,20 @@
+ORION SUBSPACE BEACON KEY
+
+FORMAT: FAT32
+SUGGESTED VOLUME LABEL: SUBSPACE BEACON
+
+TARGET ACTIVATION IS FULLY OFFLINE.
+
+PREPARE ON WINDOWS
+1. Run PREPARE-KEY.cmd. No OpenSSH Client installation is required.
+2. Confirm x86/x64/ARM64 payload verification.
+3. Copy the complete package to the FAT32 USB.
+
+FIELD USE
+1. Insert SUBSPACE BEACON.
+2. Run ACTIVATE.cmd.
+3. Approve UAC.
+4. Read the activation output for `Private IPv4` and `Public IPv4`. A failed public lookup does not affect activation.
+5. On the controller, double-click `SCAN-LAN.cmd`. It selects active physical/private LAN routes automatically and discovers TCP 22022 without a manually assigned target IP.
+6. SSH using the controller private key.
+7. Run DEACTIVATE.cmd when finished.
